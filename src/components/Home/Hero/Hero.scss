@@ -1,0 +1,9 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+.jumbotron {
+  background-image: url('https://via.placeholder.com/1000');
+
+  h1, p, hr {
+    color: $white;
+  }
+}

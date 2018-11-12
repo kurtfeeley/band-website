@@ -1,0 +1,12 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+footer.footer {
+  width: 100%;
+  height: 50px;
+  background-color: $dark;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
