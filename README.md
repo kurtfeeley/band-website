@@ -1,6 +1,6 @@
-##Band Website
+## Band Website
 
-###Running the site locally
+### Running the site locally
 To run this site locally, you will need to install Node.js and Git.
 
 To do so go to the [Node.js website](https://nodejs.org), and download the LTS version.
@@ -26,7 +26,7 @@ to run the website. The 3rd command runs the website locally and will open a bro
 `http://localhost:3000`. If the window doesn't open automatically, after running `npm run start`,
 click [this link.](http://localhost:3000)
 
-###Editting the site
+### Editting the site
 I started building this site in React.js because honestly once you know it, it sucks to build in
 anything else.
 
