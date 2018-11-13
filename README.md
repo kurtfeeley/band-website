@@ -17,7 +17,7 @@ Once you have those downloaded and installed do a quick check in your command li
 If those commands gave you version numbers you are ready to go!
 
 From your command line, in the directory you want to hold the project, execute the following commands.
-* `git clone http://github.com/mmelvin0581/band-website`
+* `git clone https://github.com/mmelvin0581/band-website`
 * `npm install`
 * `npm run start`
 
