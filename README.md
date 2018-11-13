@@ -1,44 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Band Website
 
-## Available Scripts
+###Running the site locally
+To run this site locally, you will need to install Node.js and Git.
 
-In the project directory, you can run:
+To do so go to the [Node.js website](https://nodejs.org), and download the LTS version.
 
-### `npm start`
+Once that is complete you will need Git. To download Git go to [their website](https://git-scm.com/)
+and download the version for your computer.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Once you have those downloaded and installed do a quick check in your command line or terminal.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+`npm --version` - This should give you a version number.
 
-### `npm test`
+`git --version` - This should give you a version number.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If those commands gave you version numbers you are ready to go!
 
-### `npm run build`
+From your command line, in the directory you want to hold the project, execute the following commands.
+* `git clone http://github.com/mmelvin0581/band-website`
+* `npm install`
+* `npm run start`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The 1st command grabs the repository from the web. The 2nd command installs the necessary packages
+to run the website. The 3rd command runs the website locally and will open a browser window to
+`http://localhost:3000`. If the window doesn't open automatically, after running `npm run start`,
+click [this link.](http://localhost:3000)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+###Editting the site
+I started building this site in React.js because honestly once you know it, it sucks to build in
+anything else.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you would like to contribute code to the site, branch off of `master` and work on your own branch.
+To do this, execute these commands in the project directory:
+* `git pull` - This gets you the latest code from the repository
+* `git checkout -b <branch-name>` - Replacing `<branch-name>` with the name you'd like your branch to be called.
+* After you make your additions, in the terminal: `git add .` - This adds all the changes in the current directory,
+don't forget the `.`.
+* Then: `git commit -m "a short description of your changes"` - You must use have the quotes.
 
-### `npm run eject`
+You are free to edit the code! To push your branch to the GitHub repository:
+* `git push --set-upstream origin <branch-name>` - For the first push, after that it's just `git push`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+When you are ready for me to merge your code:
+* Navigate to the [repository on GitHub](https://github.com/mmelvin0581/band-website)
+* Select New Pull Request
+* For the first dropdown, select `master`, from the second select your branch.
+* Hit the big green Create Pull Request button
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Please email me at *mmelvin0581@gmail.com* or hit me up in the slack channel if you have any questions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
