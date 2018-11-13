@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
-        <h1 className="display-4">Band Name</h1>
+        <h1 className="display-4">DJ Aerostar</h1>
         <p className="lead">
           This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
         </p>

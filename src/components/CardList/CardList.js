@@ -4,7 +4,7 @@ import Card from '../Card/Card';
 
 const CardList = () => {
   const contentArray = [
-    'Check out some photos of me along with some of my favorite inspiration quotes.',
+    'Check out some photos of me along with some of my favorite inspirational quotes.',
     'Listen and watch some of my latest music videos.',
     'You know you want that new t-shirt...',
     'Find out where my next show close to you will be. See ya there!'
