@@ -29,7 +29,7 @@ class Header extends Component {
         <div className={`${classOne}`} id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about" exact>About</NavLink>
+              <NavLink className="nav-link" to="/about" exact>About Me</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/music" exact>Listen</NavLink>

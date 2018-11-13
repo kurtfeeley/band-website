@@ -1,9 +1,14 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 .jumbotron {
-  background-image: url('https://via.placeholder.com/1000');
+  background-image: url('../../../assets/images/hero.jpeg');
+  background-position: center;
 
   h1, p, hr {
     color: $white;
+  }
+
+  p {
+    text-shadow: 2px 2px 5px #000;
   }
 }
