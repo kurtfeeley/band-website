@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import logo from '../../assets/images/logo_inverted.jpg'
-import name from '../../assets/images/name.jpg';
+import logo from '../../assets/images/logo.png'
 
 class Header extends Component {
   state = { collapsed: true };
@@ -21,14 +20,7 @@ class Header extends Component {
             src={logo}
             alt="logo"
             style={{
-              width: '40px',
-              height: '40px'
-          }}/>
-          <img
-            src={name}
-            alt="artist name"
-            style={{
-              width: '160px',
+              width: '140px',
               height: '40px'
           }}/>
         </NavLink>

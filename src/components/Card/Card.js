@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Card = props => {
   return (
-    <div className="card" style={{height: '400px'}}>
+    <div className="card">
       <img
         className="card-img-top img-fluid"
         src={props.image}
