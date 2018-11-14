@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import logo from '../../assets/images/logo_inverted.jpg'
+import name from '../../assets/images/name.jpg';
+
 class Header extends Component {
   state = { collapsed: true };
 
@@ -13,7 +16,22 @@ class Header extends Component {
 
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <NavLink className="navbar-brand" to="/">Band Name</NavLink>
+        <NavLink className="navbar-brand" to="/">
+          <img
+            src={logo}
+            alt="logo"
+            style={{
+              width: '40px',
+              height: '40px'
+          }}/>
+          <img
+            src={name}
+            alt="artist name"
+            style={{
+              width: '160px',
+              height: '40px'
+          }}/>
+        </NavLink>
         <button
           onClick={this.toggleNavbar}
           className={`${classTwo}`}
