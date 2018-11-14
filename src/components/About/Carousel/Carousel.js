@@ -65,7 +65,7 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className="carousel" style={{marginTop: '30px'}}>
+      <div className="carousel container-fluid" style={{marginTop: '30px'}}>
         <CarouselLeftArrow onClick={e => this.goToPrevSlide(e)} />
 
         <ul className="carousel__slides list-group">
