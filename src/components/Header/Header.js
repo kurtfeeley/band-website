@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import logo from '../../assets/images/logo.png'
+
 class Header extends Component {
   state = { collapsed: true };
 
@@ -13,7 +15,15 @@ class Header extends Component {
 
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <NavLink className="navbar-brand" to="/">Band Name</NavLink>
+        <NavLink className="navbar-brand" to="/">
+          <img
+            src={logo}
+            alt="logo"
+            style={{
+              width: '140px',
+              height: '40px'
+          }}/>
+        </NavLink>
         <button
           onClick={this.toggleNavbar}
           className={`${classTwo}`}
@@ -29,7 +39,7 @@ class Header extends Component {
         <div className={`${classOne}`} id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about" exact>About</NavLink>
+              <NavLink className="nav-link" to="/about" exact>About Me</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/music" exact>Listen</NavLink>
