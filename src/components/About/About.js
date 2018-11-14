@@ -2,34 +2,40 @@ import React from 'react';
 
 import Carousel from './Carousel/Carousel';
 
+import djAerostar from '../../assets/images/djAeroStar.jpeg';
+import dog from '../../assets/images/dog.jpeg';
+import fans from '../../assets/images/fans.jpeg';
+import grayScale from '../../assets/images/grayscaleTurnTables.jpeg';
+import soundBoard from '../../assets/images/soundBoard.jpeg';
+
 
 // Data for carousel
 const slides = [
   {
     snippet:
-      "Tomorrow, you will be released. If you are bored of brawling with thieves and want to achieve something there is a rare blue flower that grows on the eastern slopes. Pick one of these flowers. If you can carry it to the top of the mountain, you may find what you were looking for in the first place.",
-    title: "Bane",
-    source: "https://via.placeholder.com/1000x600"
+      "Hi, this is a picture of me in my natural habitat. I was prepping for a show in Las Vegas when this was taken.",
+    title: "Natural Habitat",
+    source: djAerostar
   }, {
     snippet:
-      "You have learn to bury your guilt with anger. I will teach you to confront it and to face the truth.",
-    title: "Ra's Al Ghul",
-    source: "https://via.placeholder.com/1000x600"
+      "This is my Pug, Yoda. You see the similarity, right?",
+    title: "The force is strong with this one",
+    source: dog
   }, {
     snippet:
-      "Introduce a little anarchy, upset the established order and everything becomes chaos. I'm an agent of chaos. Oh, and you know the thing about chaos? It's fair.",
-    title: "Joker",
-    source: "https://via.placeholder.com/1000x600"
+      "Here is a picture of some of my favorite people, my fans. I've got the best fans in the world!",
+    title: "Only the best",
+    source: fans
   }, {
     snippet:
-      "I can't do that as Bruce Wayne... as a man. I'm flesh and blood. I can be ignored, destroyed. But as a symbol, I can be incorruptible, I can be everlasting.",
-    title: "Bruce Wayne",
-    source: "https://via.placeholder.com/1000x600"
+      "This is me when after I first got signed. I saved for YEARS to get this turn table!",
+    title: "In the beginning",
+    source: grayScale
   }, {
     snippet:
-      "But it's not who you are underneath... it's what you do that defines you.",
-    title: "Rachel Dawes",
-    source: "https://via.placeholder.com/1000x600"
+      "This is now what I've got in my Home Studio. I couldn't have done it without my fans.",
+    title: "Then I upgraded",
+    source: soundBoard
   }
 ];
 
