@@ -10,13 +10,11 @@ const Listen = () => {
   ];
   return (
     <div className="container mt-3">
+      <ul>
       {videos.map((video) => {
         return (
-          <div
-            className='card mb-3'
-            key={video}
-          >
-            <div className="card-body _video">
+          <div key={video}>
+            <div>
               <VideoPlayer
                 id={video}
               />
@@ -24,6 +22,7 @@ const Listen = () => {
           </div>
         );
       })}
+      </ul>
     </div>
   );
 };

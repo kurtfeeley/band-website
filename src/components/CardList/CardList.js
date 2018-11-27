@@ -25,18 +25,20 @@ const CardList = () => {
   ];
 
   return (
-    <div className="row" style={{alignItems: 'center'}}>
-      {contentArray.map((content, index) =>
-        <div className="col-lg-3 col-md-6 col-sm-12 mb-4" key={index}>
-          <Card
-            content={content}
-            linkText={linkTextArray[index]}
-            to={toArray[index]}
-            image={imageArray[index]}
-            title={titleArray[index]}
-          />
-        </div>
-      )}
+    <div className="row" style={{ alignItems: 'center' }}>
+      <div className="card-deck">
+        {contentArray.map((content, index) =>
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3" key={index}>
+            <Card
+              content={content}
+              linkText={linkTextArray[index]}
+              to={toArray[index]}
+              image={imageArray[index]}
+              title={titleArray[index]}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,42 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Youtube from 'react-youtube';
 
-class VideoPlayer extends Component {
-  state = {
-    width: 0,
-    height: 0
-  };
+export const VideoPlayer = props => {
 
-  componentDidMount () {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-
-  componentWillUnmount () {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions = () => {
-    this.setState(() => ({
-      width: document.getElementsByClassName('video-cont')[0].style.maxWidth,
-      height: document.getElementsByClassName('video-cont')[0].style.maxHeight
-    }));
-  };
-
-  render () {
-    console.log(document.getElementsByClassName('container'))
-    return (
-      <div className='video-cont' style={{maxWidth: '1140px', maxHeight: '500px'}}>
-        <Youtube
-          videoId={this.props.id}
-          opts={{
-            width: this.state.width,
-            height: this.state.height
-          }}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <Youtube
+      className='mr-3'
+      videoId={props.id}
+    />
+  );
+};
 
 export default VideoPlayer;
