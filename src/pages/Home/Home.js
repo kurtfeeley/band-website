@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Hero from './Hero/Hero';
-import CardList from '../CardList/CardList';
+import Hero from '../../components/Hero/Hero';
+import CardList from '../../components/CardList/CardList';
 
 const Home = () => {
   return (
