@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Listen from './pages/Listen/Listen';
+import Tours from './pages/Tours/Tours';
 
 import './App.scss';
 
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path='/' exact component={Home}/>
           <Route path='/about' exact component={About}/>
           <Route path='/music' exact component={Listen}/>
+          <Route path='/tours' exact component={Tours}/>
           <Footer/>
         </>
       </Router>
