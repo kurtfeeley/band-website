@@ -3,9 +3,9 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Listen from './components/Listen/Listen';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Listen from './pages/Listen/Listen';
 
 import './App.scss';
 

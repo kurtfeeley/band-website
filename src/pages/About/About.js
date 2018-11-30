@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Carousel from './Carousel/Carousel';
+import Carousel from '../../components/Carousel/Carousel';
 
 import djAerostar from '../../assets/images/djAeroStar.jpeg';
 import dog from '../../assets/images/dog.jpeg';

@@ -1,7 +1,7 @@
-@import '~bootstrap/scss/bootstrap.scss';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 
 .jumbotron {
-  background-image: url('../../../assets/images/hero.jpeg');
+  background-image: url('../../assets/images/hero.jpeg');
   background-position: center;
 
   h1, p, hr {
