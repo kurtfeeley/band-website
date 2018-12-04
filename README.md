@@ -49,3 +49,6 @@ When you are ready for me to merge your code:
 
 Please email me at *mmelvin0581@gmail.com* or hit me up in the slack channel if you have any questions.
 
+### Media Sources
+- Adobe Spark
+- Matt Collamer, Unsplash Photo, unsplash.com 
