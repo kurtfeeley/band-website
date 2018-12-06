@@ -42,7 +42,7 @@ class Header extends Component {
               <NavLink className="nav-link" to="/about" exact>About Me</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/music" exact>Listen</NavLink>
+              <NavLink className="nav-link" to="/music" exact>Videos</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/merchandise" exact>Merchandise</NavLink>
