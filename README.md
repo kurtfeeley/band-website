@@ -55,3 +55,7 @@ Please email me at *mmelvin0581@gmail.com* or hit me up in the slack channel if 
 - Martin Garrix - Animals (Official Video), youtube.com
 - David Guetta & Showtek - Bad ft.Vassy (Lyrics Video), youtube.com
 - Swedish House Mafia - Don't You Worry Child ft. John Martin, youtube.com
+- Zyper Visuals Demo Reel 2014, youtube.com
+- EDDIE N MARCO at SNOW GLOW, youtube.com
+- HARD ROCK SOFA at REPUBLIC, youtube.com
+- BINGO PLAYERS AT WILD KNIGHT, youtube.com
