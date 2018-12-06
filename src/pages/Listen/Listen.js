@@ -21,7 +21,7 @@ class Listen extends Component {
   getVideoList = () => {
     const ids = [];
     const url =
-      "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAyhsCWS9QhSxevIHMFNew9Ad6bGXWa-GM&channelId=UCQYRpseK_F16xFWfakkrLIA&part=snippet,id&order=date&maxResults=20";
+      `https://www.googleapis.com/youtube/v3/search?key=AIzaSyAyhsCWS9QhSxevIHMFNew9Ad6bGXWa-GM&channelId=UCQYRpseK_F16xFWfakkrLIA&part=snippet,id&order=date&maxResults=20`;
     fetch(url)
       .then(resp => resp.json())
       .then(resp =>

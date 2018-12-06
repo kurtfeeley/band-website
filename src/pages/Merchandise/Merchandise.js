@@ -13,14 +13,11 @@ import mug from "../../assets/images/Mug.png";
 import wTee from "../../assets/images/Womenst.png";
 
 class Merchandise extends Component {
-  state = { show: false, index: 0 };
-
-  hideModal = () => {
-    this.setState({ show: false, index: 0 });
-  };
-
-  render() {
-    const merchandise = [
+  state = {
+    show: false,
+    index: 0,
+    input: "",
+    merchandise: [
       {
         item: flashDrive,
         price: "10",
@@ -64,11 +61,32 @@ class Merchandise extends Component {
         id: 5,
         content: "Ladies have style too..."
       }
-    ];
+    ]
+  };
+
+  hideModal = () => {
+    this.setState({ show: false, index: 0 });
+  };
+
+  filterMerchandise = e => {
+    this.setState({ input: e.target.value });
+  };
+
+  render() {
+    const merchandise = this.state.merchandise.filter(
+      swag => this.state.input === "" || swag.title.toLowerCase().includes(this.state.input)
+    );
 
     return (
       <div className="container card mt-3">
-        <h2 className="text-center mt-3 mb-0">Merchandise</h2>
+        <h2 className="text-center m-3">Merchandise</h2>
+        <input
+          type="text"
+          onChange={this.filterMerchandise}
+          value={this.state.input}
+          className='form-control'
+          placeholder='Search for merchandise...'
+        />
         <div className="row card-body ">
           {merchandise.map((merch, index) => {
             return (
@@ -88,27 +106,32 @@ class Merchandise extends Component {
             );
           })}
           <Modal show={this.state.show} handleClose={this.hideModal}>
-            <div className="container-fluid">
+            <div className="container">
               <div className="card m-3">
                 <div className="card-body modal_body">
-                  <div className="media" style={{flexDirection: 'column'}}>
+                  <div className="media" style={{ flexDirection: "column" }}>
                     <img
-                      src={merchandise[this.state.index].item}
-                      alt={merchandise[this.state.index].title}
+                      src={!!merchandise[this.state.index] ? merchandise[this.state.index].item : ''}
+                      alt={!!merchandise[this.state.index] ? merchandise[this.state.index].title : ''}
                       className="img-fluid"
                     />
                     <div className="media-body">
                       <div className="modal-text ml-3">
-                        <h4 className='mt-2'>{merchandise[this.state.index].title}</h4>
-                        <section className='mb-2'>
-                          {merchandise[this.state.index].content}
+                        <h4 className="mt-2">
+                          {!!merchandise[this.state.index] ? merchandise[this.state.index].title : ''}
+                        </h4>
+                        <section className="mb-2">
+                          {!!merchandise[this.state.index] ? merchandise[this.state.index].content : ''}
                         </section>
                       </div>
                     </div>
                   </div>
-                    <a href="https://amazon.com" className="btn btn-danger buy-button">
-                      Buy Now!
-                    </a>
+                  <a
+                    href="https://amazon.com"
+                    className="btn btn-danger buy-button"
+                  >
+                    Buy Now!
+                  </a>
                 </div>
               </div>
             </div>
