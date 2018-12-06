@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import CarouselIndicator from './CarouselIndicator';
-import CarouselLeftArrow from './CarouselLeftArrow';
-import CarouselRightArrow from './CarouselRightArrow';
-import CarouselSlide from './CarouselSlide';
+import CarouselIndicator from "./CarouselIndicator";
+import CarouselLeftArrow from "./CarouselLeftArrow";
+import CarouselRightArrow from "./CarouselRightArrow";
+import CarouselSlide from "./CarouselSlide";
 
-import './Carousel.scss';
+import "./Carousel.scss";
 
 // Carousel wrapper component
 class Carousel extends Component {
@@ -65,24 +65,24 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className="carousel container-fluid" style={{marginTop: '30px'}}>
+      <div className="carousel container-fluid" style={{ marginTop: "30px" }}>
         <CarouselLeftArrow onClick={e => this.goToPrevSlide(e)} />
 
         <ul className="carousel__slides list-group">
-          {this.props.slides.map((slide, index) =>
-            <CarouselSlide
-              key={index}
-              index={index}
-              activeIndex={this.state.activeIndex}
-              slide={slide}
-            />
-          )}
+          {this.props.slides.map((slide, index) => (
+              <CarouselSlide
+                index={index}
+                activeIndex={this.state.activeIndex}
+                slide={slide}
+                key={index}
+              />
+          ))}
         </ul>
 
         <CarouselRightArrow onClick={e => this.goToNextSlide(e)} />
 
         <ul className="carousel__indicators">
-          {this.props.slides.map((slide, index) =>
+          {this.props.slides.map((slide, index) => (
             <CarouselIndicator
               key={index}
               index={index}
@@ -90,7 +90,7 @@ class Carousel extends Component {
               isActive={this.state.activeIndex === index}
               onClick={() => this.goToSlide(index)}
             />
-          )}
+          ))}
         </ul>
       </div>
     );

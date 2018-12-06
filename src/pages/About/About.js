@@ -41,7 +41,8 @@ const slides = [
 
 const About = () => {
   return (
-    <div>
+    <div className='container card mt-3'>
+      <h2 className="text-center mt-3">About me</h2>
       <Carousel slides={slides}/>
     </div>
   );

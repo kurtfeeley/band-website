@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Listen from './pages/Listen/Listen';
 import Tours from './pages/Tours/Tours';
+import Merchandise from './pages/Merchandise/Merchandise';
 
 import './App.scss';
 
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path='/about' exact component={About}/>
           <Route path='/music' exact component={Listen}/>
           <Route path='/tours' exact component={Tours}/>
+          <Route path='/merchandise' exact component={Merchandise}/>
           <Footer/>
         </>
       </Router>

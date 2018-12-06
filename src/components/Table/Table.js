@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FilterableTable from 'react-filterable-table';
+import './Table.scss';
 
 const Table = () => {
   const data = [
