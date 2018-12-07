@@ -13,56 +13,64 @@ import mug from "../../assets/images/Mug.png";
 import wTee from "../../assets/images/Womenst.png";
 
 class Merchandise extends Component {
-  state = {
-    show: false,
-    index: 0,
-    input: "",
-    merchandise: [
-      {
-        item: flashDrive,
-        price: "10",
-        title: "Flash Drive",
-        id: 0,
-        content:
-          "Download you favorite DJ-Aerostar Videos to this and show them to your friends"
-      },
-      {
-        item: hat,
-        price: "17",
-        title: "Hat",
-        id: 1,
-        content: "These are more expensive at the live show, just saying..."
-      },
-      {
-        item: mLongSleeve,
-        price: "22",
-        title: "Men's Long Sleeve",
-        id: 2,
-        content: "For my outside shows up north"
-      },
-      {
-        item: mTee,
-        price: "18",
-        title: "Men's Tee",
-        id: 3,
-        content: "For your everyday swag"
-      },
-      {
-        item: mug,
-        price: "10",
-        title: "Coffee Mug",
-        id: 4,
-        content: "This holds the elixir of life itself"
-      },
-      {
-        item: wTee,
-        price: "18",
-        title: "Women's Tee",
-        id: 5,
-        content: "Ladies have style too..."
-      }
-    ]
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+      index: 0,
+      input: "",
+      merchandise: [
+        {
+          item: flashDrive,
+          price: "10",
+          title: "Flash Drive",
+          id: 0,
+          content:
+            "Download you favorite DJ-Aerostar Videos to this and show them to your friends"
+        },
+        {
+          item: hat,
+          price: "17",
+          title: "Hat",
+          id: 1,
+          content: "These are more expensive at the live show, just saying..."
+        },
+        {
+          item: mLongSleeve,
+          price: "22",
+          title: "Men's Long Sleeve",
+          id: 2,
+          content: "For my outside shows up north"
+        },
+        {
+          item: mTee,
+          price: "18",
+          title: "Men's Tee",
+          id: 3,
+          content: "For your everyday swag"
+        },
+        {
+          item: mug,
+          price: "10",
+          title: "Coffee Mug",
+          id: 4,
+          content: "This holds the elixir of life itself"
+        },
+        {
+          item: wTee,
+          price: "18",
+          title: "Women's Tee",
+          id: 5,
+          content: "Ladies have style too..."
+        }
+      ],
+      visibleMerch: []
+    };
+
+    // Sync our visible list with the full list
+    this.state.visibleMerch = this.state.merchandise;
+  }
+  
 
   hideModal = () => {
     this.setState({ show: false, index: 0 });
@@ -70,13 +78,22 @@ class Merchandise extends Component {
 
   filterMerchandise = e => {
     this.setState({ input: e.target.value });
+    const value = e.target.value;
+
+    // If we have text in our text box, filter the visible items to all that contain the text
+    if (value.length > 0) {
+      const regex = new RegExp(`${value}`, "i");
+      let filteredMerch = this.state.merchandise.filter(v => regex.test(v.title));      
+      this.setState(() => ({ visibleMerch: filteredMerch }));
+    }
+    else {
+      this.setState(() => ({ visibleMerch: this.state.merchandise }));
+    }
   };
 
-  render() {
-    const merchandise = this.state.merchandise.filter(
-      swag => this.state.input === "" || swag.title.toLowerCase().includes(this.state.input)
-    );
-
+  render() {    
+    const merchandise = this.state.visibleMerch;
+   
     return (
       <div className="container card mt-3">
         <h2 className="text-center m-3">Merchandise</h2>
@@ -84,8 +101,8 @@ class Merchandise extends Component {
           type="text"
           onChange={this.filterMerchandise}
           value={this.state.input}
-          className='form-control'
-          placeholder='Search for merchandise...'
+          className="form-control"
+          placeholder="Search for merchandise..."
         />
         <div className="row card-body ">
           {merchandise.map((merch, index) => {
@@ -111,17 +128,29 @@ class Merchandise extends Component {
                 <div className="card-body modal_body">
                   <div className="media" style={{ flexDirection: "column" }}>
                     <img
-                      src={!!merchandise[this.state.index] ? merchandise[this.state.index].item : ''}
-                      alt={!!merchandise[this.state.index] ? merchandise[this.state.index].title : ''}
+                      src={
+                        !!merchandise[this.state.index]
+                          ? merchandise[this.state.index].item
+                          : ""
+                      }
+                      alt={
+                        !!merchandise[this.state.index]
+                          ? merchandise[this.state.index].title
+                          : ""
+                      }
                       className="img-fluid"
                     />
                     <div className="media-body">
                       <div className="modal-text ml-3">
                         <h4 className="mt-2">
-                          {!!merchandise[this.state.index] ? merchandise[this.state.index].title : ''}
+                          {!!merchandise[this.state.index]
+                            ? merchandise[this.state.index].title
+                            : ""}
                         </h4>
                         <section className="mb-2">
-                          {!!merchandise[this.state.index] ? merchandise[this.state.index].content : ''}
+                          {!!merchandise[this.state.index]
+                            ? merchandise[this.state.index].content
+                            : ""}
                         </section>
                       </div>
                     </div>
